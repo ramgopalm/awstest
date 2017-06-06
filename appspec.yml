@@ -4,11 +4,11 @@ files:
   - source: /
     destination: /home/ec2-user/web
 hooks:
-#  AfterInstall:
-#    - location: aws-scripts/after_install.sh
-#      timeout: 300
-#      runas: root
-#  ApplicationStart:
-#    - location: aws-scripts/start_server.sh
-#      timeout: 300
-#      runas: root
+  AfterInstall:
+    - location: aws-scripts/after_install.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: aws-scripts/start_server.sh
+      timeout: 300
+      runas: root
