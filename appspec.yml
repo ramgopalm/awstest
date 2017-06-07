@@ -2,13 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/web
+    destination: /home/ec2-user/nodejs-seed
 hooks:
-  AfterInstall:
-    - location: aws-scripts/after_install.sh
+  BeforeInstall:
+    - location: scripts/install_dependencies
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: aws-scripts/start_server.sh
+    - location: scripts/start_server
       timeout: 300
       runas: root
+
+
